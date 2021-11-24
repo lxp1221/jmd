@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="/assets/css/APlayer.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="image-wrap">
+            <img src="/assets/img/jmd.png" alt="">
+        </div>
+        <div id="aplayer"></div>
+        <div id="play-icon" class="">
+            <img src="/assets/img/music.svg">
+        </div>
+    </div>
+    <script src="/assets/js/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/APlayer.min.js"></script>
+    <script>
+        const ap = new APlayer({
+            container: document.getElementById('aplayer'),
+            mini: true,
+            autoplay: false,
+            audio: [{
+                name: '我们都是追梦人',
+                artist: '秦岚 / 江疏影 / 景甜 / 王俊凯 / 王源 / 易烊千玺 / 吴磊',
+                url: '/assets/music/music01.flac',
+                cover: '/assets/img/cover.png'
+            }]
+        });
+        ap.on('playing', function () {
+            console.log('播放中');
+        })
+        $("#play-icon").click(function () {
+            console.log(this);
+            ap.toggle();
+            $("#play-icon").toggleClass("play-on");
+        })
+        document.addEventListener('WeixinJSBridgeReady', function () {
+            $("#play-icon").click();
+        })
+        document.addEventListener('touchstart', function () {
+            $("#play-icon").click();
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+}
+.container {
+  width: 100vw;
+  overflow-x: none;
+}
+.container .image-wrap img {
+  width: 100%;
+  height: 100%;
+}
+.container #aplayer {
+  display: none;
+  position: fixed;
+  top: 20px;
+  right: 0;
+}
+.container #play-icon {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 20px;
+  right: 20px;
+  opacity: 0.5;
+}
+.container #play-icon img {
+  width: 30px;
+  height: 30px;
+}
+@-webkit-keyframes reverseRotataZ {
+  0% {
+    -webkit-transform: rotateZ(0deg);
+  }
+  100% {
+    -webkit-transform: rotateZ(360deg);
+  }
+}
+.container .play-on {
+  -webkit-animation: reverseRotataZ 1.2s linear infinite;
+}
