@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>福州大学至诚学院庆祝建党100周年暨2021年迎新晚会节目单</title>
     <link rel="stylesheet" href="/assets/css/style.css">
     <link rel="stylesheet" href="/assets/css/APlayer.min.css">
 </head>
@@ -34,20 +34,20 @@
                 cover: '/assets/img/cover.png'
             }]
         });
-        ap.on('playing', function () {
-            console.log('播放中');
-        })
+        // ap.on('playing', function () {
+        //     console.log('播放中');
+        // })
         $("#play-icon").click(function () {
             console.log(this);
             ap.toggle();
             $("#play-icon").toggleClass("play-on");
         })
-        document.addEventListener('WeixinJSBridgeReady', function () {
-            $("#play-icon").click();
-        })
-        document.addEventListener('touchstart', function () {
-            $("#play-icon").click();
-        })
+        // document.addEventListener('WeixinJSBridgeReady', function () {
+        //     $("#play-icon").click();
+        // })
+        // document.addEventListener('touchstart', function () {
+        //     $("#play-icon").click();
+        // })
     </script>
 </body>
 
